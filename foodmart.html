@@ -420,7 +420,59 @@
             height: 110%;
             width: 100%;
         }
+        .s1{
+            height: 300vh;
+            width: 100%;
+            border: solid black 1px;
+            padding-top: .1px;
+        }
+        .s1_p{
+            margin-top: 60px;
+            margin-left: 30px;
+            color: rgba(0, 0, 0, 0.699);
+        }
+        .s1_div{
+            height: 230px;
+            width: 100%;
+            padding-top: .1px;
+            margin-top: 50px;
+            border: solid black 1px;
+        }
+        .s1_innr_boxes{
+            height: 90%;
+            width: 22%;
+            /* border: solid black 1px; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+            margin-left: 30px;
+            padding-top: .1px;
+            border-radius: 13px;
+            transition: all .2s ease-out;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.247);
 
+        }
+        .s1_innr_boxes:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .s1_icondiv{
+            height: 40px;
+            width: 40px;
+            /* border: solid black 1px; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        #vegitable{
+            height: 100%;
+            width: 100%;
+        }
+        .s1_ptah{
+            text-align: center;
+            margin-top: 13px;
+            font-size: 20px;
+
+        }
     </style>
 </head>
 
@@ -577,6 +629,37 @@
             </div>
             
         </header>
+        <!-- ///////////////header////////// -->
+
+        <section class="s1">
+            <h1 class="s1_p">Category</h1>
+            <div class="s1_div">
+                <div class="s1_innr_boxes"> 
+                    <div class="s1_icondiv">
+                        <img id="vegitable" src="./images/vegetables.png" alt="">
+                    </div>
+                    <p class="s1_ptah">Fruite & Veges</p>
+                </div>
+                <div class="s1_innr_boxes">
+                     <div class="s1_icondiv">
+                        <img id="vegitable" src="./images/icon-bread-baguette.png" alt="">
+                    </div>
+                    <p class="s1_ptah">Breads & Sweets</p>
+                </div>
+                <div class="s1_innr_boxes">
+                     <div class="s1_icondiv">
+                        <img id="vegitable" src="./images/icon-wine-glass-bottle.png" alt="">
+                    </div>
+                    <p class="s1_ptah">Fruits & Drinks</p>
+                </div>
+                <div class="s1_innr_boxes">
+                    <div class="s1_icondiv">
+                        <img id="vegitable" src="./images/icon-soft-drinks-bottle.png" alt="">
+                    </div>
+                    <p class="s1_ptah">juices & Drinks</p>
+                </div>
+            </div>
+        </section>
     </main>
 
 
