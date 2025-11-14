@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>mart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            /* background-color: red; */
+            padding-top: .1px;
+        }
+
+        .nav_div {
+            height: 90px;
+            width: 100%;
+            padding-top: 10px;
+            border-bottom: solid rgba(0, 0, 0, 0.274) 1px;
+            /* background-color: blue; */
+        }
+
+        .logo_div {
+            height: 70%;
+            width: 280px;
+            /* border: solid black 1px; */
+            margin-left: 40px;
+            margin-top: 13px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #h_logo {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .h_div {
+            height: 70%;
+            width: 600px;
+            /* border: solid black 1px; */
+            background-color: whitesmoke;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 100px;
+            border-radius: 18px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .h_div2 {
+            height: 100%;
+            width: 140px;
+            /* border: solid black 1px; */
+            border-radius: 10px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+            overflow: hidden;
+
+        }
+
+        #h_select {
+            width: 100%;
+            height: 50px;
+            outline: none;
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.527);
+            background-color: transparent;
+            border: none;
+            padding-left: 5px;
+            border: solid transparent;
+
+        }
+
+        #input {
+            width: 330px;
+            height: 33px;
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.438);
+            border: none;
+            background-color: transparent;
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        .search_div {
+            height: 60%;
+            width: 40px;
+            display: inline-block;
+            vertical-align: top;
+            /* border: solid black 1px; */
+            margin-left: 24px;
+            margin-top: 10px;
+        }
+
+        #search {
+            margin-left: 7px;
+            margin-top: 5px;
+            font-size: 22px;
+            color: rgba(0, 0, 0, 0.411);
+        }
+
+        .h_div3 {
+            height: 60px;
+            width: 130px;
+            /* border: solid black 1px; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 170px;
+            margin-top: 16px;
+        }
+
+        .icon_div {
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            padding-top: .1px;
+            /* border: solid black 1px; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            background-color: whitesmoke;
+        }
+
+        #user {
+            font-size: 28px;
+            margin-left: 3px;
+            margin-top: 5.5px;
+            color: rgba(0, 0, 0, 0.527);
+        }
+
+        .h_div4 {
+            height: 55px;
+            width: 1000px;
+            /* border: solid black 1px; */
+            margin-top: 30px;
+            margin-left: 20px;
+
+        }
+
+        .select_div {
+            height: 100%;
+            width: 200px;
+            /* border: solid black 1px; */
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        #select_1 {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding-left: 5px;
+            font-size: 16px;
+            padding-right: 5px;
+        }
+
+        .h_ul {
+            height: 100%;
+            width: 72%;
+            /* border: solid red 1px; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 30px;
+        }
+
+        .lis {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 28px;
+            font-size: 17.5px;
+            margin-top: 15px;
+        }
+
+        #lis {
+            margin-left: 28px;
+            width: 80px;
+            margin-top: 15px;
+            padding-left: 3px;
+            font-size: 17.5px;
+            border: none;
+        }
+
+        .h_imges_div {
+            height: 600px;
+            border-radius: 12px;
+            margin-top: 40px;
+            width: 97%;
+            margin: auto;
+            /* border: solid black 1px; */
+            background-image: url(./images/pink.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            height: 97%;
+            width: 53%;
+            /* border: solid black 1px; */
+            border-radius: 12px;
+            margin-top: 10px;
+            margin-left: 3px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            transition: all .3s ease-out;
+        }
+
+        #radio_1 {
+            position: absolute;
+            bottom: 50px;
+            left: 300px;
+        }
+
+        #radio_1:checked~.slider_div {
+            margin-left: 0px;
+        }
+
+        #radio_2 {
+            position: absolute;
+            bottom: 50px;
+            left: 320px;
+
+        }
+
+        #radio_2:checked~.slider_div {
+            margin-left: -700px;
+        }
+
+        #radio_3 {
+            position: absolute;
+            bottom: 50px;
+            left: 340px;
+        }
+
+        #radio_3:checked~.slider_div {
+            margin-left: -1400px;
+        }
+
+        .slider_div {
+            height: 100%;
+            width: 350%;
+            /* border: solid red 1px; */
+            transition: all .3s linear;
+        }
+
+        .s_cards {
+            height: 100%;
+            width: 685px;
+            /* border: solid blue 1px; */
+            display: inline-block;
+            vertical-align: top;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.185);
+            border-radius: 12px;
+            padding-top: .1px;
+            background-color: rgba(135, 207, 235, 0.253);
+        }
+
+        .h_h1 {
+            color: rgb(255, 255, 0);
+            margin-top: 50px;
+            margin-left: 30px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+
+        }
+
+        .h_h2 {
+            margin-left: 30px;
+            margin-top: 40px;
+            font-size: 40px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .h_h3 {
+            margin-left: 30px;
+            font-size: 40px;
+            margin-top: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .lorem_div {
+            height: 60px;
+            width: 350px;
+            margin-left: 30px;
+            margin-top: 30px;
+            /* border: solid black 1px; */
+        }
+
+        .l_text {
+            font-size: 18px;
+            color: rgb(90, 88, 88);
+        }
+
+        .h_btn {
+            width: 170px;
+            height: 60px;
+            font-size: 19px;
+            border-radius: 13px;
+            border: solid black 1px;
+            background-color: transparent;
+            margin-left: 30px;
+            margin-top: 40px;
+            transition: all .3s linear;
+        }
+
+        .h_btn:hover {
+            background-color: rgba(0, 0, 0, 0.705);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .h_imgdiv2 {
+            height: 350px;
+            width: 260px;
+            margin-top: -430px;
+            margin-left: 400px;
+            /* border: solid black 1px; */
+        }
+
+        #juice_ {
+            height: 100%;
+            width: 100%;
+        }
+        .h_prnt_2{
+            width: 40%;
+            height:100%;
+            display: inline-block;
+            vertical-align: top;
+             margin-top: 20px;
+            margin-left: 50px;
+            /* border: solid black 1px; */
+        }
+        .h_div5{
+            height: 45%;
+            width: 100%;
+           
+           
+            border-radius: 13px;
+            padding-top: .1px;
+            overflow: hidden;
+            /* border: solid black 1px; */
+            background-color: rgba(172, 255, 47, 0.425);
+        }
+        .h_ptag{
+            font-size: 30px;
+            margin-left: 40px;
+            margin-top: 29px;
+        }
+        .h_line_div{
+            width: 70px;
+            border: solid rgba(0, 0, 0, 0.589) 1px;
+            margin-left: 40px;
+            margin-top: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .h_sale{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        .Fruits{
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+        .h_ptag_2{
+            margin-left: 40px;
+            margin-top: 20px;
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .errow_div{
+            height: 30px;
+            width: 30px;
+            /* border: solid black 1px; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 15px;
+        }
+        #errow{
+            margin-top: 7px;
+            margin-left: 5px;
+        }
+        .h_img_divv{
+            display: inline-block;
+            vertical-align: top;
+            height: 60%;
+            width: 51%;
+            /* border: solid black 1px; */
+            margin-left: 50px;
+            margin-top: -90px;
+            overflow: hidden;
+
+        }
+        #fruite_basket{
+            height: 110%;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header class="header">
+            <div class="nav_div">
+                <div class="logo_div">
+                    <img id="h_logo" src="./images/logo.png" alt="">
+                </div>
+                <div class="h_div">
+                    <div class="h_div2">
+                        <select id="h_select">
+                            <option value="">All Categries</option>
+                            <option value="">Drinks</option>
+                            <option value="">Bread</option>
+                            <option value="">Chocolates</option>
+                        </select>
+                    </div>
+
+                    <input type="text" id="input" placeholder="Search fot more than 20,000 products">
+
+                    <div class="search_div">
+                        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                    </div>
+
+
+                </div>
+                <div class="h_div3">
+                    <div class="icon_div">
+                        <i class="fa-regular fa-user" id="user"></i>
+                    </div>
+                    <div class="icon_div">
+                        <i class="fa-solid fa-heart" id="user"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="h_div4">
+                <div class="select_div">
+                    <select id="select_1">
+                        <option value="">Shope by Departments</option>
+                        <option value="">Choclates</option>
+                        <option value="">Drinks</option>
+                        <option value="">Groceries</option>
+                    </select>
+                </div>
+                <ul class="h_ul">
+                    <li class="lis">Women</li>
+                    <li class="lis"> Men</li>
+                    <li class="lis">Kids</li>
+                    <li class="lis">Accessories</li>
+                    <select id="lis">
+                        <option value="">Pages</option>
+                        <option value="">About us</option>
+                        <option value="">Single Product</option>
+                        <option value="">Cart</option>
+                        <option value="">Checkout</option>
+                        <option value="">Blog</option>
+                        <option value="">Single post</option>
+                        <option value="">Style</option>
+                        <option value="">Contact</option>
+                        <option value="">My Account</option>
+                    </select>
+                    <li class="lis">Brand</li>
+                    <li class="lis">Sale</li>
+                    <li class="lis">Blog</li>
+                </ul>
+
+            </div>
+            <div class="h_imges_div">
+                <div class="container">
+                    <input type="radio" name="r_1" id="radio_1" checked>
+                    <input type="radio" name="r_1" id="radio_2">
+                    <input type="radio" name="r_1" id="radio_3">
+                    <div class="slider_div">
+                        <div class="s_cards">
+                            <h1 class="h_h1">100% Natural</h1>
+                            <h1 class="h_h2">Fresh</h1>
+                            <h1 class="h_h3">Smoothie $</h1>
+                            <h1 class="h_h3">Summer Juice</h1>
+                            <div class="lorem_div">
+                                <p class="l_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
+                                    error!</p>
+                            </div>
+                            <button class="h_btn">Shop Now</button>
+                            <div class="h_imgdiv2">
+                                <img id="juice_" src="./images/juice.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s_cards" style="margin-left: 20px;">
+                            <h1 class="h_h1">100% Natural</h1>
+                            <h1 class="h_h2">Fresh</h1>
+                            <h1 class="h_h3">Smoothie $</h1>
+                            <h1 class="h_h3">Summer Juice</h1>
+                            <div class="lorem_div">
+                                <p class="l_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,error!
+                                </p>
+                            </div>
+                            <button class="h_btn">Shop Collection</button>
+                            <div class="h_imgdiv2">
+                                <img id="juice_" src="./images/juice.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s_cards" style="margin-left: 20px;">
+                            <h1 class="h_h1">100% Natural</h1>
+                            <h1 class="h_h2">Fresh</h1>
+                            <h1 class="h_h3">Smoothie $</h1>
+                            <h1 class="h_h3">Summer Juice</h1>
+                            <div class="lorem_div">
+                                <p class="l_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
+                                    error!</p>
+                            </div>
+                            <button class="h_btn">Shop Now</button>
+                            <div class="h_imgdiv2">
+                                <img id="juice_" src="./images/juice.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h_prnt_2">
+
+                <div class="h_div5">
+                    <p class="h_ptag">20% off</p>
+                    <div class="h_line_div"></div>
+                    <p class="h_sale">Sale</p>
+                    <h1 class="Fruits">Fruits &</h1>
+                    <h1 class="Fruits" style="margin-top: 5px;">Vegetables</h1>
+                    <p class="h_ptag_2">Shop Collection</p>
+                    <div class="errow_div">
+                        <i class="fa-solid fa-arrow-right-long" id="errow"></i>
+                    </div>
+                    <div class="h_img_divv">
+                        <img id="fruite_basket" src="./images/pianapple.png" alt="">
+                    </div>
+                </div>
+                <div class="h_div5" style="margin-top: 30px; background-color: rgba(255, 192, 203, 0.432);">
+                    <p class="h_ptag">15% off</p>
+                    <div class="h_line_div"></div>
+                    <p class="h_sale">Sale</p>
+                    <h1 class="Fruits" style="margin-top: 20px;">Baked Products</h1>
+                    <p class="h_ptag_2">Shop Collection</p>
+                    <div class="errow_div">
+                        <i class="fa-solid fa-arrow-right-long" id="errow"></i>
+                    </div>
+                    <div class="h_img_divv" style="margin-top: -100px;height: 80%;">
+                        <img id="fruite_basket" src="./images/basket.png" alt="">
+                    </div>
+                </div>
+
+                </div>
+
+                
+            </div>
+            
+        </header>
+    </main>
+
+
+</body>
+
+</html>
